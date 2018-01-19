@@ -82,4 +82,22 @@
 ////////////////////////////////////////////////////////////////////////////////
 //scope - where a variable is availabe lin your code;
 //let - same as var but you cant use it until you define the vasriable;
-//Asynchronous callbacks -
+//Asynchronous callbacks - more than one at a time
+
+// function waitThreeSeconds() {
+//   var ms = 3000 + new Date().getTime();
+//   while (new Date() < ms){}
+//   console.log('finished function');
+// }
+//
+// function clickHandler(){
+//   console.log('click event!');
+// }
+//
+// // listen for the click event
+// document.addEventListener('click', clickHandler);
+//
+// waitThreeSeconds();
+// console.log('finished execution');
+
+////////////////////////////////////////////////////////////////////////////////
