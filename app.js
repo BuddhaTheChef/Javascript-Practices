@@ -68,16 +68,18 @@
 // a();
 //   console.log(myVar);
 ////////////////////////////////////////////////////////////////////////////////
-function b() {
-  console.log(myVar);
-}
-
-function a() {
- var myVar = 2;
-   console.log(myVar);
-b();
-}
-
-var myVar = 1;
-a();
-  
+// function a() {
+//   function b() {
+//     console.log(myVar);
+//   }
+//  var myVar = 2;
+// b();
+// }
+//
+// var myVar = 1;
+// a();
+//   console.log(myVar);
+////////////////////////////////////////////////////////////////////////////////
+//scope - where a variable is availabe lin your code;
+//let - same as var but you cant use it until you define the vasriable;
+//Asynchronous callbacks -
