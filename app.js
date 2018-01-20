@@ -186,3 +186,31 @@
 // console.log(person["address"]["state"]);
 
 ////////////////////////////////////////////////////////////////////////////////
+//                                Object Literal
+
+var person = {
+  firstname: "AJ",
+  lastname: "Wietecha",
+  address: {
+    street: "Poop St.",
+    city: "kapolei",
+    state: "HI"
+  }
+};
+
+function greet(person){
+  console.log('Hi ' + person.firstname );
+}
+
+greet(person)
+
+greet({
+  firstname: "Mary",
+  lastname: "Jane"
+})
+
+person.address2 = {
+  street: '1234 P St.'
+}
+
+////////////////////////////////////////////////////////////////////////////////
