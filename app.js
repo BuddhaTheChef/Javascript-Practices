@@ -127,7 +127,6 @@
 //ALL LOG TO 4
 
 ////////////////////////////////////////////////////////////////////////////////
-
 //Coercion - converting a value from one type to another
 
 //var a = 'heelo' + 'world';
@@ -141,3 +140,49 @@
 //null < 1 => true
 //""== 0 => true
 //""== false => true
+
+////////////////////////////////////////////////////////////////////////////////
+// var a;
+//
+// a=0;
+//
+// if(a || a === 0) {
+//   console.log('something is there');
+// }
+
+////////////////////////////////////////////////////////////////////////////////
+// function greet(name) {
+//   name = name || '<Your name here>';
+//   console.log(name);
+//   console.log('Hello ' + name);
+// }
+//
+// greet('AJ');
+// greet();
+
+////////////////////////////////////////////////////////////////////////////////
+//                                Objects
+//
+// var person = new Object();
+//
+// person["firstname"] = "AJ";
+// person["lastname"] = "WIETECHA"
+//
+// var firstNameProp = "firstname";
+//
+// console.log(person);
+// console.log(person[firstNameProp]);
+//
+// console.log(person.firstname);
+// console.log(person.lastname);
+//
+// person.address = new Object();
+//
+// person.address.street  = "123 Poop St.";
+// person.address.city = 'Kapolei';
+// person.address.state = 'HI';
+//
+// console.log(person.address)
+// console.log(person["address"]["state"]);
+
+////////////////////////////////////////////////////////////////////////////////
