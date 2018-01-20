@@ -188,29 +188,85 @@
 ////////////////////////////////////////////////////////////////////////////////
 //                                Object Literal
 
-var person = {
-  firstname: "AJ",
-  lastname: "Wietecha",
-  address: {
-    street: "Poop St.",
-    city: "kapolei",
-    state: "HI"
-  }
-};
-
-function greet(person){
-  console.log('Hi ' + person.firstname );
-}
-
-greet(person)
-
-greet({
-  firstname: "Mary",
-  lastname: "Jane"
-})
-
-person.address2 = {
-  street: '1234 P St.'
-}
+// var person = {
+//   firstname: "AJ",
+//   lastname: "Wietecha",
+//   address: {
+//     street: "Poop St.",
+//     city: "kapolei",
+//     state: "HI"
+//   }
+// };
+//
+// function greet(person){
+//   console.log('Hi ' + person.firstname );
+// }
+//
+// greet(person)
+//
+// greet({
+//   firstname: "Mary",
+//   lastname: "Jane"
+// })
+//
+// person.address2 = {
+//   street: '1234 P St.'
+// }
 
 ////////////////////////////////////////////////////////////////////////////////
+//Namespace - a container for variables anf functions
+
+// var objectLiteral = {
+//   firstname: 'Aj',
+//   isAProgrammer: true,
+// }
+//
+// console.log(JSON.stringify(objectLiteral));
+//
+//
+// var jsonValue = JSON.parse('{"firstname": "AJ", "isAProgrammer":true}');
+//
+// console.log(jsonValue);
+
+////////////////////////////////////////////////////////////////////////////////
+//First class functions - everything you can do with other types you can do with
+// functions
+
+// function greet() {
+//   console.log('HI');
+// }
+//
+// greet.language = "english";
+// console.log(greet.language);
+////////////////////////////////////////////////////////////////////////////////
+//Expression - a unit of code that results in a value
+
+// function greet() {
+//   console.log('HI');
+// }
+//
+// greet();
+//
+// var greatAnon = function() {
+//   console.log('HI');
+// }
+//
+// greatAnon();
+
+// function log(a) {
+//   console.log(a);
+//   a();
+// }
+//
+// log(function(){
+//   console.log('HI');
+// });
+////////////////////////////////////////////////////////////////////////////////
+var a = 3;
+var b;
+
+b = a;
+a = 2;
+
+console.log(a);
+console.log(b);
