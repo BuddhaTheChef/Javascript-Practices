@@ -638,3 +638,84 @@
 // console.log(arr7);
 
 ////////////////////////////////////////////////////////////////////////////////
+// inheritence - one object gets access to the propertysand methods of another object
+
+//                                    Protoypes
+// var person = {
+//   firstname: "Aj",
+//   lastname: "Wietecha",
+//   getFullName: function (){
+//     return this.firstname + " " + this.lastname;
+//   }
+// }
+//
+// var john = {
+//   firstname: "John",
+//   lastname: "doe",
+// }
+//
+// john.__proto__ = person;
+// console.log(john.getFullName());
+// console.log(john.firstname);
+//
+// var jane = {
+//   firstname: "Jane"
+// }
+//
+// jane.__proto__ = person;
+//
+// console.log(jane.getFullName());
+
+////////////////////////////////////////////////////////////////////////////////
+//Reflection - an object can look at itself, listing and changing its propertys and methods
+
+// var person = {
+//   firstname: "Aj",
+//   lastname: "Wietecha",
+//   getFullName: function (){
+//     return this.firstname + " " + this.lastname;
+//   }
+// }
+//
+// var john = {
+//   firstname: "John",
+//   lastname: "doe",
+// }
+//
+// john.__proto__ = person;
+//
+// for (var prop in john) {
+//   if(john.hasOwnProperty(prop)){
+//   console.log(prop + ': ' + john[prop]);
+// }
+// }
+//
+// var jane = {
+//   address: "111 Main St.",
+//   getFormalFullName: function(){
+//     return this.lastname + ', ' + this.firstname;
+//   }
+// }
+//
+// var jim = {
+//   getFirstName: function(){
+//     return firstname;
+//   }
+// }
+//
+// _.extend(john,jane,jim);
+//
+// console.log(john);
+////////////////////////////////////////////////////////////////////////////////
+
+function Person(firstname, lastname) {
+  console.log(this);
+  this.firstname = firstname;
+  this.lastname = lastname;
+};
+
+var john = new Person("John", "Doe");
+console.log(john);
+
+var jane = new Person("Jane", "POOP");
+console.log(jane);
