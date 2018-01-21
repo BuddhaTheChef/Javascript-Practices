@@ -364,22 +364,94 @@
 // greet("AJ","Wietecha","wow","dodod","defendld");
 ////////////////////////////////////////////////////////////////////////////////
 
-function greet(firstname, lastname, language){
-  language = language || "english"
-  if(language === "english"){
-    console.log("Hello " + firstname + " " + lastname);
-  }
-  if(language === "spanish"){
-    console.log("Hola " + firstname + " " + lastname);
-  }
-  }
+// function greet(firstname, lastname, language){
+//   language = language || "english"
+//   if(language === "english"){
+//     console.log("Hello " + firstname + " " + lastname);
+//   }
+//   if(language === "spanish"){
+//     console.log("Hola " + firstname + " " + lastname);
+//   }
+//   }
+//
+//   function greetEng(firstname, lastname){
+//     greet(firstname, lastname, "english")
+//   }
+//   function greetSpan(firstname, lastname){
+//     greet(firstname, lastname, "spanish")
+//   }
+//
+//   greetEng('AJ', 'Wietecha');
+//   greetSpan('AJ', 'Wietecha');
+////////////////////////////////////////////////////////////////////////////////
+//WHitespace- invisible characters that create literal space
+// function getPerson(){
+//   return {
+//     firstname: 'AJJ'
+//   }
+// }
+// console.log(getPerson());
+//
+// var first, last, lang;
+//
+// var person = {
+//   first: 'John',
+//   last: 'WOW'
+// }
+//
+// console.log(person);
+////////////////////////////////////////////////////////////////////////////////
+//                                IIFE
 
-  function greetEng(firstname, lastname){
-    greet(firstname, lastname, "english")
-  }
-  function greetSpan(firstname, lastname){
-    greet(firstname, lastname, "spanish")
-  }
+// function greet(name){
+//   console.log("HEllo " + name);
+// }
+// greet("John");
+//
+// var greetFunc = function(name){
+//   console.log("Hello " + name);
+// }
+// greetFunc("Mark");
+//
+// //IIFE
+// var greeting = function(name){
+//   console.log("Hello " + name);
+// }('Aj');
+//
+// (function(name){
+//   var greeting = "Hello";
+//   console.log(greeting + " " + name);
+// }("MOTTO"));
 
-  greetEng('AJ', 'Wietecha');
-  greetSpan('AJ', 'Wietecha');
+////////////////////////////////////////////////////////////////////////////////
+//                              Closures
+
+// function greet(whattosay){
+//   return function(name){
+//     console.log(whattosay + " " + name);
+//   }
+// }
+// //1 way
+// greet("Hi")('TONY');
+// //2 way
+// var sayHi = greet('HI');
+// sayHi("AJ");
+
+function  buildFunc() {
+  var arr = [];
+
+  for( var i = 0; i < 3; i++){
+    arr.push(
+      function(){
+        console.log(i)
+      }
+    )
+  }
+  return arr;
+}
+
+var fs = buildFunc();
+
+fs[0]();
+fs[1]();
+fs[2]();
