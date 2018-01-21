@@ -262,11 +262,124 @@
 //   console.log('HI');
 // });
 ////////////////////////////////////////////////////////////////////////////////
-var a = 3;
-var b;
+// var a = 3;
+// var b;
+//
+// b = a;
+// a = 2;
+//
+// console.log(a);
+// console.log(b);
+//
+// //Mutate - to change something
+// //Immutable - something cant be changed
+//
+// var c = {greeting: 'Hi'}
+// var d;
+//
+// d = c;
+//
+// c.greeting = "HELLO";
+//
+// console.log(c);
+// console.log(d);
+//
+// function changeGreeting(obj){
+//   obj.greeting = 'HOLA';
+// }
+//
+// changeGreeting(d);
+// console.log(c);
+// console.log(d);
+//
+// c = {greeting: 'HOWDY'};
+// console.log(c);
+// console.log(d);
+////////////////////////////////////////////////////////////////////////////////
+// function a(){
+//   console.log(this);
+//   this.newVar = "hello";
+// }
+//
+// var b = function(){
+//   console.log(this);
+// }
+// a();
+// b();
+//
+// console.log(newVar);
+//
+// var c = {
+//   name: "the c object",
+//   log: function(){
+//     var that = this;
+//     that.name = "updated C object";
+//     console.log(that);
+//
+//     var setname = function(newname){
+//       that.name = newname;
+//     }
+//     setname('Updated the CCC object');
+//     console.log(that);
+//   }
+// }
+// c.log();
+////////////////////////////////////////////////////////////////////////////////
+// var arr = new Array();
+// var arr = [
+//   1,
+//   false,
+//   {
+//     name: "Aj",
+//     address: "Poop St."
+//   },
+//   function(name){
+//     var greeting = 'HELLo';
+//     console.log(greeting+ " " + name)
+//   },
+//   "Hello"
+// ];
+// console.log(arr);
+// arr[3](arr[2].name);
+////////////////////////////////////////////////////////////////////////////////
+//Arguments - the parameters you pass to a function
 
-b = a;
-a = 2;
+// function greet(firstname, lastname, language, ...other){
+//   language = language || "english"
+//   if(arguments.length === 0){
+//     console.log("Missing params");
+//     console.log('-----------');
+//   }
+//   console.log(firstname);
+//   console.log(lastname);
+//   console.log(language);
+//   console.log(arguments);
+//   console.log('arg 0: ' + arguments[0]);
+//   console.log('-----------');
+// }
+//
+// greet();
+// greet("AJ");
+// greet("AJ","Wietecha");
+// greet("AJ","Wietecha","wow","dodod","defendld");
+////////////////////////////////////////////////////////////////////////////////
 
-console.log(a);
-console.log(b);
+function greet(firstname, lastname, language){
+  language = language || "english"
+  if(language === "english"){
+    console.log("Hello " + firstname + " " + lastname);
+  }
+  if(language === "spanish"){
+    console.log("Hola " + firstname + " " + lastname);
+  }
+  }
+
+  function greetEng(firstname, lastname){
+    greet(firstname, lastname, "english")
+  }
+  function greetSpan(firstname, lastname){
+    greet(firstname, lastname, "spanish")
+  }
+
+  greetEng('AJ', 'Wietecha');
+  greetSpan('AJ', 'Wietecha');
