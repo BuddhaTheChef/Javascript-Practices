@@ -436,22 +436,205 @@
 // //2 way
 // var sayHi = greet('HI');
 // sayHi("AJ");
+////////////////////////////////////////////////////////////////////////////////
+// function  buildFunc() {
+//   var arr = [];
+//
+//   for( var i = 0; i < 3; i++){
+//     arr.push(
+//       function(){
+//         console.log(i)
+//       }
+//     )
+//   }
+//   return arr;
+// }
+//
+// var fs = buildFunc();
+//
+// fs[0]();
+// fs[1]();
+// fs[2]();
+// //////////////////////////////////
+// function  buildFunc2() {
+//   var arr = [];
+//
+//   for( var i = 0; i < 3; i++){
+//     arr.push(
+//       (function(j){
+//         return function(){
+//           console.log(j);
+//         }
+//       }(i))
+//     )
+//   }
+//   return arr;
+// }
+//
+// var fs2 = buildFunc2();
+//
+// fs2[0]();
+// fs2[1]();
+// fs2[2]();
+////////////////////////////////////////////////////////////////////////////////
 
-function  buildFunc() {
-  var arr = [];
+// function makeGreeting(language){
+//   return function(firstname, lastname){
+//     if(language === 'en'){
+//       console.log("Hello " + firstname + " " + lastname);
+//     }
+//     if(language === 'es'){
+//       console.log("Hola " + firstname + " " + lastname);
+//     }
+//   }
+// }
+//
+// var greetEng = makeGreeting('en');
+// var greetSpan = makeGreeting('es');
+//
+// greetEng("John", "Doe");
+// greetSpan("Aj", "WOR");
 
-  for( var i = 0; i < 3; i++){
-    arr.push(
-      function(){
-        console.log(i)
-      }
-    )
-  }
-  return arr;
-}
+////////////////////////////////////////////////////////////////////////////////
+//Callback function -function you give to another function , to be run when
+//the other function is finished
 
-var fs = buildFunc();
+// function sayHiLater(){
+//   var greeting = 'HI!';
+//   setTimeout(function(){
+//     console.log(greeting)
+//   }, 3000)
+// }
+//
+// sayHiLater();
 
-fs[0]();
-fs[1]();
-fs[2]();
+// //jquery uses function expressions and first-class functions
+// $("button").click(function(){
+//
+// });
+
+
+//                               CallBack
+
+// function tellMeWhenDone(callback){
+//   var a = 1000;
+//   var b = 2000;
+//
+//   callback();
+// }
+//
+// tellMeWhenDone(function(){
+//   console.log('I am done!')
+// })
+//
+// tellMeWhenDone(function(){
+//   alert('All done!')
+// })
+
+////////////////////////////////////////////////////////////////////////////////
+//                           CALL - APPLY - BIND
+
+// var person = {
+//   firstname: "AJ",
+//   lastname: 'Wietecha',
+//   getFullName: function(){
+//     var fullname = this.firstname + " " + this.lastname;
+//     return fullname
+//   }
+// }
+//
+// var logName = function(lang1, lang2){
+//   console.log("Logged: " + this.getFullName());
+//   console.log("Arguments: " + lang1 + " " + lang2);
+//   console.log('--------------------');
+// }.bind(person)
+//
+// logName();
+//
+// var logPersonName = logName.bind(person);
+// logPersonName('en');
+//
+// logName.call(person, 'en', 'es');
+//
+// logName.apply(person, ['1', '2']);
+//
+// (function(lang1, lang2){
+//  console.log("Logged: " + this.getFullName());
+//  console.log("Arguments: " + lang1 + " " + lang2);
+//  console.log('--------------------');
+// }).apply(person,['OPPs', 'WHOOPs']);
+
+////////////////////////////////////////////////////////////////////////////////
+// //function borrowing
+// var person2 = {
+//   firstname: "Jane",
+//   lastname: 'Doe'
+// }
+//
+// console.log(person.getFullName.apply(person2));
+//
+// //function currying - creating a copy of a function but with some preset paramaters
+// function multiply(a, b){
+//   return a*b;
+// }
+//
+// var multiplyByTwo = multiply.bind(this, 2);
+//
+// console.log(multiplyByTwo(4));
+//
+// var multiplyByTwo = multiply.bind(this, 3);
+//
+// console.log(multiplyByTwo(4));
+
+////////////////////////////////////////////////////////////////////////////////
+//                          functional Programming
+
+// function mapForEach(arr, fn){
+//   var newArr = [];
+//   for(var i = 0; i < arr.length; i++) {
+//     newArr.push(
+//       fn(arr[i])
+//     )
+//   }
+//   return newArr;
+// }
+//
+// var arr1 = [1,2,3];
+// console.log(arr1);
+//
+// var arr2 = mapForEach(arr1, function(item){
+//   return item * 2;
+// });
+//  console.log(arr2);
+//
+// var arr3 = mapForEach(arr1, function(item){
+//   return item > 2;
+// });
+//  console.log(arr3);
+//
+//  var checkPastLimit = function(limiter, item){
+//    return item > limiter;
+//  }
+//  var arr4 = mapForEach(arr1,checkPastLimit.bind(this, 1));
+//
+//  console.log(arr4);
+//
+// var past = function(limiter){
+//   return function(limiter, item){
+//     return item > limiter;
+//   }.bind(this, limiter);
+// };
+//
+// var arr5 = mapForEach(arr1, past(2));
+// console.log(arr5);
+//
+// ////////////////////////////////////////////////////////////////////////////////
+// //                        Functional Programming 2(underscore.js)
+//
+// var arr6 = _.map(arr1,function(item){return item * 3});
+// console.log(arr6);
+//
+// var arr7 = _.filter([2,3,4,5,6,7], function(item){return item % 2 === 0})
+// console.log(arr7);
+
+////////////////////////////////////////////////////////////////////////////////
