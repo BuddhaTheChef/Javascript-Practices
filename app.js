@@ -800,3 +800,92 @@
 //it works under the hood.
 
 ////////////////////////////////////////////////////////////////////////////////
+// object literal syntax big data
+
+// var people = [
+//   {
+//     firstname: 'Aj',
+//     lastname: 'Wietecha',
+//     address: [
+//       '111 Main St.',
+//       '222 Third St.'
+//     ]
+//   },
+//   {
+//     firstname: 'Jane',
+//     lastname: 'Doe',
+//     address: [
+//       '213 Main St.',
+//       '123 Third St.'
+//     ],
+//     greet: function(){
+//       return 'Hello';
+//     }
+//   }
+// ]
+//
+// console.log(people);
+
+////////////////////////////////////////////////////////////////////////////////
+// type of and instance of (figuring out what something is)
+
+// function Person(name) {
+//   this.name = name;
+// }
+//
+// var e = new Person('Jane');
+// console.log(typeof e);
+// console.log(e instanceof Person);
+//
+//
+// var z = function() {}
+//
+// console.log(typeof z);
+//
+// console.log(typeof Person);
+
+////////////////////////////////////////////////////////////////////////////////
+//                               Strict Mode
+function logNewPerson(){
+  "use strict";
+
+  var person2;
+  persom2 = {};
+  console.log(persom2);
+}
+
+
+
+
+var person;
+
+persom  = {};
+
+console.log(persom);
+
+logNewPerson();
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////
