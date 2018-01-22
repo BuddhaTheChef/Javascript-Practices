@@ -707,15 +707,96 @@
 //
 // console.log(john);
 ////////////////////////////////////////////////////////////////////////////////
+//                        Constructor Functions
+//Constructor Functions - a normal function that is used to construct objects
 
-function Person(firstname, lastname) {
-  console.log(this);
-  this.firstname = firstname;
-  this.lastname = lastname;
-};
+// function Person(firstname, lastname) {
+//   console.log(this);
+//   this.firstname = firstname;
+//   this.lastname = lastname;
+// };
+//
+// var john = new Person("John", "Doe");
+// console.log(john);
+//
+// var jane = new Person("Jane", "POOP");
+// console.log(jane);
+//
+// Person.prototype.getFullName = function(){
+//   return "HI " + this.firstname + " " + this.lastname;
+// }
+//
+// console.log(john.getFullName());
 
-var john = new Person("John", "Doe");
-console.log(john);
+////////////////////////////////////////////////////////////////////////////////
 
-var jane = new Person("Jane", "POOP");
-console.log(jane);
+// String.prototype.isLengthGreaterThan = function(limit){
+//   return this.length > limit;
+// }
+// console.log("flshjbrlhkjb".isLengthGreaterThan(10));
+//
+// Number.prototype.isPositive = function(){
+//   return this > 0;
+// }
+
+////////////////////////////////////////////////////////////////////////////////
+
+//DANGEROUS DO NOT USE FOR IN OR FOR LOOPS WITH CONSTURCTERS!!!!!!!!!!
+
+// Array.prototype.myCustom = "COOL!";
+//
+// var arr = ["john", "jane", "jim"];
+//
+// for (var prop in arr) {
+//   console.log(prop + ": " + arr[prop]);
+// }
+
+////////////////////////////////////////////////////////////////////////////////
+//                              Object.create
+
+//  var person = {
+//    firstname: "Default",
+//    lastname: "Default",
+//    greet: function(){
+//      return 'Hi ' + this.firstname;
+//    }
+//  }
+//
+//  var john = Object.create(person);
+//  john.firstname = "John";
+//  john.lastname = "Doe"
+//  console.log(john);
+//
+//  // PolyFill - code that adds a feature which the engine may lack.
+//
+// if(!Object.create){
+//   Object.create = function (i) {
+//     if(arguments.length > 1) {
+//       throw new Error('Object.create does not exsist')
+//     }
+//     function F() {}
+//     F.prototype = i;
+//     return new F();
+//   };
+// }
+
+////////////////////////////////////////////////////////////////////////////////
+//                            ES6 and CLASSES
+
+
+
+// class InformalPerson extends Person {
+//   constructor(firstname,lastname){
+//     super(firstname,lastname);
+//   }
+//   greet(){
+//     return "Yo " + firstname;
+//   }
+// }
+//      ^ this is still prototypal inheritence but es6 way
+
+
+//Syntactic sugar - a diffrent way of typing your code that doesnt change how
+//it works under the hood.
+
+////////////////////////////////////////////////////////////////////////////////
