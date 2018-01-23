@@ -846,46 +846,31 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 //                               Strict Mode
-function logNewPerson(){
-  "use strict";
-
-  var person2;
-  persom2 = {};
-  console.log(persom2);
-}
-
-
-
-
-var person;
-
-persom  = {};
-
-console.log(persom);
-
-logNewPerson();
-
-
-
+// function logNewPerson(){
+//   "use strict";
+//
+//   var person2;
+//   persom2 = {};
+//   console.log(persom2);
+// }
+//
+//
+// //"use strict"
+//
+// var person;
+//
+// persom  = {};
+//
+// console.log(persom);
+//
+// logNewPerson();
 
 ////////////////////////////////////////////////////////////////////////////////
+// Method Chaining - calling one method after another and each method affects
+// the parent object
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// var q = $("ul.people").addClass("newclass").removeClass("people");
+// console.log(q);
 
 
 ////////////////////////////////////////////////////////////////////////////////
