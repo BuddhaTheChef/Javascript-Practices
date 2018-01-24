@@ -874,19 +874,22 @@
 
 
 ////////////////////////////////////////////////////////////////////////////////
-
+//Transpile - convert the syntax of one programming language to another
 //                      Making my own reuseable libary
 
 var g = G$('John', 'Doe');
 g.greet().setLang('es').greet(true).log();
 
+//when button is clicked
 $('#login').click(function(){
-  var loginGrtr = G$('Aj', 'Wietecha');
-
+  //creates a new object
+  var loginGreeter = G$('Aj','Wietecha');
+ // hides UI
   $('#logindiv').hide();
+// select language based on select box and chain method that updates h1 id and true = "formal" then log
+  loginGreeter.setLang($('#lang').val()).HTMLGreeting('#greeting', true).log();
 
-  logunGrtr.setLang($('#lang').val()).HTMLGreeting('#greeting', true).log();
-})
+});
 
 
 
