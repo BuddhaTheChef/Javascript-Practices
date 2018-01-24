@@ -10,12 +10,19 @@
     <hr/>
     <h2 style="display: flex; align-items: center; justify-content: center; color:whitesmoke">ALL CONTENT IS WRITTEN IN THE CONSOLE</h2>
     <h3 style="display: flex; align-items: center; justify-content: center; color:whitesmoke">uncomment sections to view</h3>
-    <div id = "main" class="container">
+    <div id = "logindiv">
+      <select id= "lang">
+        <option>English</option>
+        <option>Spanish</option>
+      </select>
+      <input type= "button" value= "Login" id= "login"/>
+    </div>
+    <h1 id= "greeting"></h1>
       <h1>People</h1>
       <ul class = 'people'>
         <li>John Doe</li>
         <li>Jane Doe</li>
-        <li>Aj Wieteh</li>
+        <li>Aj Wieteha</li>
         <li>Jim Doe</li>
       </ul>
     </div>
@@ -24,6 +31,7 @@
       integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
       crossorigin="anonymous">
     </script>
+    <script src="Greetr.js"></script>
     <script src="underscore.js"></script>
     <script src="app.js"></script>
   </body>

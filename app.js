@@ -874,3 +874,42 @@
 
 
 ////////////////////////////////////////////////////////////////////////////////
+
+//                      Making my own reuseable libary
+
+var g = G$('John', 'Doe');
+g.greet().setLang('es').greet(true).log();
+
+$('#login').click(function(){
+  var loginGrtr = G$('Aj', 'Wietecha');
+
+  $('#logindiv').hide();
+
+  logunGrtr.setLang($('#lang').val()).HTMLGreeting('#greeting', true).log();
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////
